@@ -21,7 +21,7 @@
     />
     <link rel="canonical" href="https://pinwai.github.io/tvza-2026-midyear-report/" />
     <link rel="icon" type="image/png" href="assets/tvza-logo-512.png" />
-    <link rel="stylesheet" href="styles.css?v=20260612-logo" />
+    <link rel="stylesheet" href="styles.css?v=20260612-months" />
   </head>
   <body>
     <header class="site-header" data-nav>
@@ -192,37 +192,43 @@
           <p class="eyebrow">Timeline</p>
           <h2 id="timeline-title">月份重點</h2>
         </div>
-        <div class="timeline">
-          <article class="month">
+        <div class="timeline" data-month-list>
+          <button class="month" type="button" data-month="jan" aria-haspopup="dialog">
             <time>1 月</time>
             <h3>駕訓改革啟動</h3>
             <p>完成跨團體駕訓改革記者會協作，建立教材、路考、風險感知與全民回訓等公共訴求。</p>
-          </article>
-          <article class="month">
+            <span class="month-cta">查看月報</span>
+          </button>
+          <button class="month" type="button" data-month="feb" aria-haspopup="dialog">
             <time>2 月</time>
             <h3>程序與保險責任</h3>
             <p>追蹤強制險理賠調整與通學會勘程序，強調 NGO 參與不能只是背書。</p>
-          </article>
-          <article class="month">
+            <span class="month-cta">查看月報</span>
+          </button>
+          <button class="month" type="button" data-month="mar" aria-haspopup="dialog">
             <time>3 月</time>
             <h3>大型車、高齡與教育</h3>
             <p>把大型車安全、弱勢用路人保護義務、高齡駕駛與駕訓教學品質放進同一個安全系統討論。</p>
-          </article>
-          <article class="month">
+            <span class="month-cta">查看月報</span>
+          </button>
+          <button class="month" type="button" data-month="apr" aria-haspopup="dialog">
             <time>4 月</time>
             <h3>公聽會與淡江大橋</h3>
             <p>參與交通罰單制度公聽會，並開始整理淡江大橋規範、設計與公共論述爭議。</p>
-          </article>
-          <article class="month">
+            <span class="month-cta">查看月報</span>
+          </button>
+          <button class="month" type="button" data-month="may" aria-haspopup="dialog">
             <time>5 月</time>
             <h3>高風險駕駛與地方細設</h3>
             <p>提交高風險駕駛相關政策意見，並在地方人本示範設計中提出可落地的工程修正。</p>
-          </article>
-          <article class="month">
+            <span class="month-cta">查看月報</span>
+          </button>
+          <button class="month" type="button" data-month="jun" aria-haspopup="dialog">
             <time>6 月</time>
             <h3>政策承諾書與道路分級</h3>
             <p>針對選舉政策承諾書、主要道路速限、低碳區、TOD 與機車定位，整理更完整的公共論述。</p>
-          </article>
+            <span class="month-cta">查看月報</span>
+          </button>
         </div>
       </section>
 
@@ -286,6 +292,18 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <dialog class="month-dialog" data-month-dialog aria-labelledby="month-dialog-title">
+      <div class="dialog-shell">
+        <button class="dialog-close" type="button" data-close-dialog aria-label="關閉月報">
+          <span aria-hidden="true">×</span>
+        </button>
+        <p class="dialog-kicker" data-dialog-kicker></p>
+        <h2 id="month-dialog-title" data-dialog-title></h2>
+        <p class="dialog-summary" data-dialog-summary></p>
+        <div class="dialog-sections" data-dialog-sections></div>
+      </div>
+    </dialog>
+
+    <script src="script.js?v=20260612-months"></script>
   </body>
 </html>
