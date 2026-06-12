@@ -4,8 +4,8 @@
   --line: #dce5df;
   --paper: #f7f4ef;
   --white: #ffffff;
-  --green: #1d6f58;
-  --green-dark: #124a3c;
+  --green: #1bbf92;
+  --green-dark: #134f43;
   --mint: #dff2e9;
   --yellow: #f2c94c;
   --blue: #386f9d;
@@ -61,13 +61,18 @@ a {
   white-space: nowrap;
 }
 
-.brand-mark {
-  width: 22px;
-  height: 22px;
-  border: 6px solid var(--green);
-  border-right-color: var(--yellow);
-  border-radius: 50%;
-  display: inline-block;
+.brand-logo {
+  display: block;
+  height: 40px;
+  max-width: 78px;
+  object-fit: contain;
+  object-position: left center;
+  width: auto;
+}
+
+.brand-title {
+  font-size: 1rem;
+  font-weight: 900;
 }
 
 .nav-links {
@@ -417,10 +422,20 @@ h3 {
 .site-footer {
   background: #101713;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(130px, 210px) minmax(0, 1fr);
+  align-items: center;
   gap: 24px;
   padding: 26px clamp(20px, 6vw, 92px);
+}
+
+.footer-logo {
+  background: var(--white);
+  border-radius: 8px;
+  display: block;
+  max-width: 210px;
+  padding: 8px;
+  width: 100%;
 }
 
 .site-footer p {
@@ -470,7 +485,16 @@ h3 {
   }
 
   .brand {
-    white-space: normal;
+    white-space: nowrap;
+  }
+
+  .brand-logo {
+    height: 34px;
+    max-width: 66px;
+  }
+
+  .brand-title {
+    font-size: 0.95rem;
   }
 
   .metrics-grid,
@@ -491,6 +515,10 @@ h3 {
   }
 
   .site-footer {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo {
+    max-width: 230px;
   }
 }
